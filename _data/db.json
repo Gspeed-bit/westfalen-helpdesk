@@ -1,0 +1,60 @@
+{
+  "tickets": [
+    {
+      "id": "1",
+      "title": "Fix the sound system in the auditorium",
+      "body": "The sound system in the auditorium is experiencing issues. There is a constant buzzing noise during services which is affecting the worship experience. Urgent attention is needed to diagnose and fix the problem.",
+      "priority": "high",
+      "user": {
+        "name": "Chinedu Okonkwo"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Volunteer sign-up for Thanksgiving dinner event",
+      "body": "We are hosting a Thanksgiving dinner event for the homeless community in our area. Volunteers are needed to help with food preparation, serving meals, and clean-up. Please sign up if you're available to assist.",
+      "priority": "medium",
+      "user": {
+        "name": "Ngozi Adekunle"
+      }
+    },
+    {
+      "id": "3",
+      "title": "Request for additional chairs for Sunday service",
+      "body": "Our Sunday worship services have been experiencing higher attendance recently, and we are running out of seating capacity. Requesting additional chairs to accommodate the growing number of attendees.",
+      "priority": "low",
+      "user": {
+        "name": "Emeka Ibrahim"
+      }
+    },
+    {
+      "id": "4",
+      "title": "Fix the broken projector in the fellowship hall",
+      "body": "The projector in the fellowship hall is malfunctioning, making it difficult to display lyrics and visuals during worship gatherings and events. It requires immediate repair or replacement to ensure smooth operations.",
+      "priority": "high",
+      "user": {
+        "name": "Aisha Mohammed"
+      }
+    },
+    {
+      "id": "5",
+      "title": "Request for volunteers to set up Christmas decorations",
+      "body": "As the holiday season approaches, we are seeking volunteers to help decorate the church for Christmas. Tasks include setting up the Christmas tree, hanging lights, and arranging nativity scenes. Let's spread the joy of Christmas together!",
+      "priority": "medium",
+      "user": {
+        "name": "Olumide Adeyemi"
+      }
+    },
+    {
+      "id": "6",
+      "title": "Fix leaky faucet in the church kitchen",
+      "body": "The faucet in the church kitchen has been leaking for several days, causing water wastage and inconvenience to those using the facilities. It needs to be repaired promptly to conserve resources and maintain hygiene standards.",
+      "priority": "low",
+      "user": {
+        "name": "Chinwe Okoro"
+      }
+    }
+  ]
+
+
+}
