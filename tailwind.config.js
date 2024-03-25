@@ -11,6 +11,7 @@ module.exports = {
         primary: "#7d156d",
       },
     },
+
   },
   plugins: [],
 };
