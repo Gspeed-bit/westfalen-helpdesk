@@ -19,7 +19,7 @@ export default function layout({ children }) {
               Signup
             </Link>
             <Link className="text-lg text-primary font-bold" href="/login">
-              {" "}
+           
               Login
             </Link>
           </div>

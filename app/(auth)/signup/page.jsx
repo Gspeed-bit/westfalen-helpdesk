@@ -1,22 +1,38 @@
-export const metadata = {
-  title: "MFM Westfalen | Signup",
-};
+"use client";
+
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { useRouter } from "next/navigation";
+import AuthForm from "../AuthForm";
+import { useState } from "react";
 
 export default function Signup() {
+  const [error, setError] = useState();
+  const router = useRouter();
+  const handleSubmit = async (e, email, password) => {
+    e.preventDefault();
+    
+    
+    const supabase = createClientComponentClient();
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        emailRedirectTo: `${location.origin}/api/auth/callback`,
+      },
+    }); // sign up a new user in your database
+
+    if (error) {
+      setError(error.message);
+    }
+    if (!error) {
+      router.push("/verify");
+    }
+  };
   return (
     <main>
-      <h3>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        exercitationem ex error, nobis quae minus obcaecati deserunt vel rem
-        nesciunt cum distinctio repellat! Odit culpa animi beatae recusandae
-        aspernatur magni. Iste ab incidunt natus eligendi, maxime omnis sit
-        nostrum voluptates mollitia dolores facere, nulla animi, quod inventore
-        porro quas pariatur nisi facilis ullam nihil? Fugit nisi optio amet
-        aperiam nesciunt. Perferendis totam ducimus tempore quos adipisci qui
-        amet ratione facilis odit voluptates? Optio consequatur inventore eius
-        quos? Molestias voluptas, vel tempora, necessitatibus tenetur eius
-        aspernatur, quaerat porro deserunt fugit quidem!
-      </h3>
+      <h1 className="text-center text-3xl">Signup</h1>
+      <AuthForm handleSubmit={handleSubmit} />
+      {error && <div className="error">{error}</div>}
     </main>
   );
 }
