@@ -1,5 +1,20 @@
 import { notFound } from "next/navigation";
 
+
+export async function generateMetadata({ params }){
+const id = params.id
+
+const res = await fetch(`http://localhost:4000/tickets/${id}`)
+const ticket = await res.json()
+
+return {
+  title: `MFM Westfalen | ${ticket.title}`
+}
+}
+
+
+
+
 export async function generateStaticParams(){
   const res = await fetch(`http://localhost:4000/tickets`);
 

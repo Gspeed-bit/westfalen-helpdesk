@@ -7,10 +7,9 @@ const NotFound = () => {
         We could not find the page you were looking for.
       </p>
       <p className="text-lg ">
-        Go back to the{" "}
+        Go back to the
         <Link className=" hover:text-purple-500" href="/">
-          {" "}
-          Dashboard{" "}
+          Dashboard
         </Link>
       </p>
     </main>
